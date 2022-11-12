@@ -267,3 +267,37 @@
 # i = 1
 # for i in range(1, number+1, 2):
 #     print(" "*int((number - int(i))/2) + "*" * int(i) + " "*int((number - int(i))/2))
+
+
+# Scipt that buys things on Amazon until budget is used
+import random  # random is a module that can randomise numbers
+budget = 100  # dollars
+how_much_spent = 0  # dollars
+
+
+def buy_stuff():
+    cost_of_item = random.randint(0, 20)
+    return cost_of_item
+
+
+how_much_spent = + buy_stuff()
+print(f"total spent: {how_much_spent}")
+
+# check if over budget
+if how_much_spent < budget:
+    how_much_spent = + buy_stuff()
+    print(f"total spent: {how_much_spent}")
+
+for i in range(0, 100):
+    how_much_spent = + buy_stuff()
+    print(f"total spent: {how_much_spent}")
+
+    input("--------")
+    if how_much_spent > budget:
+        break
+
+while how_much_spent < budget:
+    how_much_spent = + buy_stuff()
+    print(f"total spent: {how_much_spent}")
+
+    input("--------")
